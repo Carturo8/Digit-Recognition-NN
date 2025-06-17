@@ -209,13 +209,13 @@ for i in range(5):
 
 ### 🧠 ¿Qué hace este bloque de código?
 
-- Se generan predicciones con el modelo ya entrenado usando el conjunto de prueba (x_test).
+- Se generan predicciones con el modelo ya entrenado usando el conjunto de prueba (`x_test`).
 
 - Se muestran las primeras 5 imágenes junto con:
 
-  - La predicción del modelo (predictions[i].argmax())
+  - La predicción del modelo (`predictions[i].argmax()`)
 
-  - La etiqueta real (y_test[i])
+  - La etiqueta real (`y_test[i]`)
 
 - Esto permite ver visualmente cómo está funcionando el modelo.
 
