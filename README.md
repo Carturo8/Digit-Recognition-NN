@@ -21,7 +21,7 @@ from tensorflow.keras import layers, models
 import matplotlib.pyplot as plt
 ```
 
-### 🔍 ¿Por qué se usan estas librerías?
+#### 🔍 ¿Por qué se usan estas librerías?
 
 1. `tensorflow`
 
@@ -47,13 +47,13 @@ Esta biblioteca se usa para visualizar imágenes o gráficas. Es muy útil para 
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 ```
 
-### 🔍 ¿Qué es MNIST?
+#### 🔍 ¿Qué es MNIST?
 
 MNIST (Modified National Institute of Standards and Technology) es un dataset muy utilizado en tareas de clasificación de imágenes. Contiene 70.000 imágenes en escala de grises de dígitos escritos a mano (del 0 al 9). Cada imagen tiene un tamaño de 28x28 píxeles.
 
 Estas imágenes vienen acompañadas de sus respectivas etiquetas (labels), que indican qué número representa cada imagen.
 
-### 📌 División de datos: ¿Qué son `x_train`, `y_train`, `x_test`, `y_test`?
+#### 📌 División de datos: ¿Qué son `x_train`, `y_train`, `x_test`, `y_test`?
 
 Cuando trabajamos con aprendizaje supervisado, es fundamental dividir los datos en al menos dos conjuntos principales:
 
@@ -64,13 +64,13 @@ Cuando trabajamos con aprendizaje supervisado, es fundamental dividir los datos 
 | `x_test`   | Imágenes no vistas durante el entrenamiento   | Para evaluar el modelo           |
 | `y_test`   | Etiquetas reales de las imágenes de prueba    | Para comparar con predicciones   |
 
-### 🎯 ¿Por qué se hace esta separación?
+#### 🎯 ¿Por qué se hace esta separación?
 
 - El modelo aprende a asociar las imágenes (`x_train`) con sus etiquetas (`y_train`) durante el entrenamiento.
 
 - Después, se evalúa su desempeño usando `x_test` y `y_test`, que contienen datos que el modelo nunca ha visto. Así se puede medir si generaliza bien o solo memorizó los datos.
 
-### 🧪 ¿Y qué pasa con la validación?
+#### 🧪 ¿Y qué pasa con la validación?
 
 Durante el entrenamiento también es importante observar cómo se comporta el modelo con datos que no está usando directamente para aprender. Para eso existe el conjunto de validación, que sirve para:
 
@@ -87,13 +87,13 @@ x_train = x_train / 255.0
 x_test = x_test / 255.0
 ```
 
-### 🎯 ¿Qué es la normalización?
+#### 🎯 ¿Qué es la normalización?
 
 La normalización es el proceso de escalar los valores de los datos para que estén dentro de un cierto rango, en este caso entre 0.0 y 1.0.
 
 Cada imagen del dataset MNIST está compuesta por píxeles con valores enteros entre 0 y 255 (porque es una imagen en escala de grises). Para que la red neuronal pueda entrenarse de forma más eficiente, se normalizan dividiendo cada valor de píxel entre 255.0.
 
-### ✅ ¿Por qué es importante?
+#### ✅ ¿Por qué es importante?
 
 - Las redes neuronales trabajan mejor cuando los datos de entrada tienen un rango uniforme y pequeño.
 
@@ -113,11 +113,11 @@ model = models.Sequential([
 ])
 ```
 
-### 🧠 ¿Qué tipo de modelo se está creando?
+#### 🧠 ¿Qué tipo de modelo se está creando?
 
 Se construye una red neuronal secuencial, lo que significa que las capas están conectadas una tras otra en orden.
 
-### 🔍 Explicación de cada capa:
+#### 🔍 Explicación de cada capa:
 
 | Capa                             | Función                                                                                                                                                     |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -125,7 +125,7 @@ Se construye una red neuronal secuencial, lo que significa que las capas están 
 | `Dense(128, activation='relu')` | Crea una capa oculta con 128 neuronas. Se usa la función de activación ReLU (Rectified Linear Unit), que introduce no linealidad y ayuda a aprender patrones. |
 | `Dense(10, activation='softmax')`| Capa de salida con 10 neuronas, una para cada dígito (0 al 9). La función softmax transforma los valores en probabilidades para cada clase.                  |
 
-### 🎯 ¿Por qué esta arquitectura?
+#### 🎯 ¿Por qué esta arquitectura?
 
 - Es una red sencilla pero efectiva para un problema como MNIST.
 
@@ -143,7 +143,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 ```
 
-### 🧪 ¿Qué significa compilar un modelo?
+#### 🧪 ¿Qué significa compilar un modelo?
 
 Antes de entrenar una red neuronal, es necesario compilarla, lo que implica definir tres aspectos clave:
 
@@ -159,11 +159,11 @@ Antes de entrenar una red neuronal, es necesario compilarla, lo que implica defi
 model.fit(x_train, y_train, epochs=5, validation_split=0.1)
 ```
 
-### 🧠 ¿Qué hace fit()?
+#### 🧠 ¿Qué hace fit()?
 
 La función `fit()` entrena el modelo utilizando los datos de entrada (`x_train`) y sus etiquetas reales (`y_train`) durante un número determinado de épocas (iteraciones completas sobre los datos).
 
-### 📌 Detalles del entrenamiento:
+#### 📌 Detalles del entrenamiento:
 
 | Parámetro               | Significado                                                                                                                                   |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -180,11 +180,11 @@ test_loss, test_acc = model.evaluate(x_test, y_test)
 print(f'\nPrecisión del modelo en datos de prueba: {test_acc:.4f}')
 ```
 
-🎯 ¿Qué hace `evaluate()`?
+#### 🎯 ¿Qué hace `evaluate()`?
 
 La función `evaluate()` permite medir el rendimiento final del modelo usando datos que nunca se usaron en el entrenamiento ni en la validación. Esto proporciona una estimación realista de cómo funcionará el modelo con datos nuevos.
 
-📌 Detalles de la evaluación:
+#### 📌 Detalles de la evaluación:
 
 | Comando                        | Significado                                                                                                                     |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
@@ -194,13 +194,14 @@ La función `evaluate()` permite medir el rendimiento final del modelo usando da
 
 Esta etapa es fundamental para entender si el modelo realmente aprendió o simplemente memorizó los datos de entrenamiento. Una alta precisión en prueba sugiere que el modelo generaliza bien.
 
-### 🧾 Resultado obtenido:
+#### 🧾 Resultado obtenido:
 
 ```python
 Precisión del modelo en datos de prueba: 0.9766
 ```
 
-📈 ¿Qué significa ese valor?
+#### 📈 ¿Qué significa ese valor?
+
 Una precisión de 0.9766 (o 97.66%) indica que el modelo acertó en casi el 98% de los casos al clasificar dígitos escritos a mano que nunca había visto antes.
 
 ✅ Esto sugiere que el modelo generaliza muy bien y es bastante confiable para este tipo de tarea.
@@ -218,7 +219,7 @@ for i in range(5):
     plt.show()
 ```
 
-### 🧠 ¿Qué hace este bloque de código?
+#### 🧠 ¿Qué hace este bloque de código?
 
 - Se generan predicciones con el modelo ya entrenado usando el conjunto de prueba (`x_test`).
 
@@ -230,7 +231,7 @@ for i in range(5):
 
 - Esto permite ver visualmente cómo está funcionando el modelo.
 
-### Ejemplos de predicciones del modelo
+#### Ejemplos de predicciones del modelo
 
 ![img1](images/prediccion_0.png)
 ![img2](images/prediccion_1.png)
