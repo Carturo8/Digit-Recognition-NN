@@ -223,41 +223,8 @@ for i in range(5):
 
 | Imagen | Predicción | Etiqueta real |
 |--------|------------|----------------|
-| ![img1](images/prediccion_0.png) | `7` | `7` |
-| ![img2](images/prediccion_1.png) | `2` | `2` |
-| ![img3](images/prediccion_2.png) | `1` | `1` |
-| ![img4](images/prediccion_3.png) | `0` | `0` |
-| ![img5](images/prediccion_4.png) | `4` | `4` |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| ![img1](images/prediccion_0.png) |
+| ![img2](images/prediccion_1.png) |
+| ![img3](images/prediccion_2.png) |
+| ![img4](images/prediccion_3.png) |
+| ![img5](images/prediccion_4.png) |
