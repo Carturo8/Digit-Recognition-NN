@@ -221,8 +221,6 @@ for i in range(5):
 
 ### Ejemplos de predicciones del modelo
 
-| Imagen |
-|--------|
 | ![img1](images/prediccion_0.png) |
 | ![img2](images/prediccion_1.png) |
 | ![img3](images/prediccion_2.png) |
