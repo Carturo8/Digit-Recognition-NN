@@ -192,7 +192,18 @@ La función `evaluate()` permite medir el rendimiento final del modelo usando da
 | `test_loss`                   | Indica qué tan mal se desempeñó el modelo en términos de pérdida.                                                               |
 | `test_acc`                    | Muestra la precisión obtenida en el conjunto de prueba (porcentaje de clasificaciones correctas).                               |
 
-🧠 Esta etapa es fundamental para entender si el modelo realmente aprendió o simplemente memorizó los datos de entrenamiento. Una alta precisión en prueba sugiere que el modelo generaliza bien.
+Esta etapa es fundamental para entender si el modelo realmente aprendió o simplemente memorizó los datos de entrenamiento. Una alta precisión en prueba sugiere que el modelo generaliza bien.
+
+### 🧾 Resultado obtenido:
+
+```python
+Precisión del modelo en datos de prueba: 0.9766
+```
+
+📈 ¿Qué significa ese valor?
+Una precisión de 0.9766 (o 97.66%) indica que el modelo acertó en casi el 98% de los casos al clasificar dígitos escritos a mano que nunca había visto antes.
+
+✅ Esto sugiere que el modelo generaliza muy bien y es bastante confiable para este tipo de tarea.
 
 ## 🔍 Paso 8: Hacer Predicciones y Visualizar Resultados
 
