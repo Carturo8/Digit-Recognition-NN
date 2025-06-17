@@ -238,3 +238,7 @@ for i in range(5):
 ![img3](images/predict_2.png)
 ![img4](images/predict_3.png)
 ![img5](images/predict_4.png)
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](https://github.com/Carturo8/Digit-Recognition-NN/blob/main/LICENSE) para más detalles.
