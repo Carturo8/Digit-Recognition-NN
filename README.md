@@ -1,6 +1,6 @@
 # 🧠 Reconocimiento de Dígitos con Redes Neuronales
 
-Este proyecto es un ejemplo práctico de clasificación supervisada en Python, en el cual se implementa una red neuronal básica utilizando TensorFlow y Keras para reconocer imágenes de dígitos escritos a mano (del 0 al 9), usando el dataset MNIST.
+Este proyecto es un ejemplo práctico de clasificación supervisada en Python, en el cual se implementa una red neuronal básica del tipo Multilayer Perceptron (MLP) utilizando TensorFlow y Keras para reconocer imágenes de dígitos escritos a mano (del 0 al 9), usando el dataset MNIST.
 
 A lo largo del proyecto se muestra cómo:
 - Cargar y preprocesar datos de imagen.
